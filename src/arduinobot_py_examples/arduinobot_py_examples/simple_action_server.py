@@ -22,10 +22,10 @@ class SimpleActionServer(Node):
             goal_handle.publish_feedback(feedback_msg)
             time.sleep(1)
 
-            goal_handle.succeed()
-            result = Fibonacci.Result()
-            result.sequence = feedback_msg.partial_sequence
-            return result
+        goal_handle.succeed()
+        result = Fibonacci.Result()
+        result.sequence = feedback_msg.partial_sequence
+        return result
         
 
 def main():
